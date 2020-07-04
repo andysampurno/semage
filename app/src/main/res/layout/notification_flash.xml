@@ -9,6 +9,8 @@
         android:id="@+id/notifFlash"
         android:padding="10dp"
         android:layout_margin="10dp"
+        android:background="#E4E0ED"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     
@@ -16,6 +18,7 @@
         android:id="@+id/qBtnNotif"
         android:text="Ok"
         android:layout_margin="10dp"
+        android:background="@drawable/buttoncustom"
         android:layout_below="@id/notifFlash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
