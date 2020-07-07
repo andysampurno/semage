@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#E4E0ED"
+    android:background="#09D5EF"
     tools:context=".home">
 
     <LinearLayout
@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/qImage"
             android:layout_width="match_parent"
-            android:background="#FDFDFD"
+            android:background="#EFEDED"
             android:layout_height="400dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
@@ -27,6 +27,8 @@
         <Button
             android:id="@+id/qBtnCamera"
             android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:text="Ambil Foto"
             android:background="@drawable/buttoncustom"
             android:layout_marginTop="20dp"
@@ -36,6 +38,8 @@
         <Button
             android:id="@+id/qBtnSrc"
             android:layout_gravity="center"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             android:background="@drawable/buttoncustom"
             android:text="Search"
             android:layout_width="200dp"

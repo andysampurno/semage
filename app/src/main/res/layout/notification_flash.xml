@@ -3,13 +3,16 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="#09D5EF"
     android:gravity="center">
 
     <TextView
         android:id="@+id/notifFlash"
         android:padding="10dp"
         android:layout_margin="10dp"
-        android:background="#E4E0ED"
+        android:background="#FFFFFF"
+        android:textStyle="normal"
+        android:textColor="#000000"
         android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -18,6 +21,8 @@
         android:id="@+id/qBtnNotif"
         android:text="Ok"
         android:layout_margin="10dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:background="@drawable/buttoncustom"
         android:layout_below="@id/notifFlash"
         android:layout_width="wrap_content"
