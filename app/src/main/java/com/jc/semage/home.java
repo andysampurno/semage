@@ -20,6 +20,8 @@
     import android.hardware.SensorManager;
     import android.os.Bundle;
     import android.provider.MediaStore;
+    import android.view.Menu;
+    import android.view.MenuItem;
     import android.view.View;
     import android.widget.Button;
     import android.widget.ImageView;
@@ -53,14 +55,6 @@
             btnCamera.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-    //                Intent intent = new Intent(MainActivity.this, camera.class);
-    //                startActivity(intent);
-    //                sensorManager = (SensorManager) getSystemService(Service.SENSOR_SERVICE);
-    //                sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-    //                Intent intentCamera = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-    //                startActivityForResult(intentCamera, CAMERA_REQUEST);
-    //                Intent interntNotifFlash = new Intent(home.this, notifFlash.class);
-    //                startActivity(interntNotifFlash);
 
                         final Dialog dialog = new Dialog(home.this);
                         dialog.setContentView(R.layout.notification_flash);
@@ -83,9 +77,9 @@
 
             btnSearch.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(home.this, viewImage.class);
-                    startActivity(intent);
+                    public void onClick(View v) {
+                        Intent intent = new Intent(home.this, viewImage.class);
+                        startActivity(intent);
                 }
             });
         }
@@ -110,7 +104,7 @@
                     alert = "Karena cahaya redup perlu mengaktifkan Flash untuk mengambil gambar";
                 }else{
 //                    light.setText("Karena cahaya terang tidak perlu mengaktifkan Flash saat mengambi gambar");
-                    alert = "Karena cahaya terang tidak perlu mengaktifkan Flash saat mengambi gambar";
+                    alert = "Karena cahaya terang tidak perlu mengaktifkan Flash saat mengambil gambar";
                 }
     //            light.setText(""+event.values[0]);
             }
@@ -129,6 +123,27 @@
                 Bitmap photoCamera = (Bitmap) data.getExtras().get("data");
                 imageView.setImageBitmap(photoCamera);
             }
+        }
+
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+            return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            if (item.getItemId()==R.id.action_helps)
+            {
+                Intent intent = new Intent(home.this, help.class);
+                startActivity(intent);
+            }
+            if (item.getItemId()==R.id.action_abouts)
+            {
+                Intent intent = new Intent(home.this, about.class);
+                startActivity(intent);
+            }
+            return true;
         }
 
 

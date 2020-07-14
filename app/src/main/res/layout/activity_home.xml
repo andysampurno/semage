@@ -29,7 +29,7 @@
             android:layout_gravity="center"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:text="Ambil Foto"
+            android:text="Camera"
             android:background="@drawable/buttoncustom"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
